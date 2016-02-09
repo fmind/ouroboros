@@ -1,4 +1,6 @@
-![](ouroboros.gif)
+<p align="center" style="width: 500px">
+  <img src="ouroboros.gif"/>
+</p>
 
 # What is Ouroboros ?
 
@@ -39,11 +41,11 @@ does not cut a list of values in two lists of equal sizes. Instead, the function
 finds the minimal number of values to sum in order to reach 50% of the distribution. 
 
 __Compared to a
-[Pearson's chi-squared test](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test#Discrete_uniform_distribution),
+[Pearson's chi-squared test](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test#Discrete_uniform_distribution)__,
 _Ouroboros_ is not a test-statistic. Thus, _Ouroboros_ is simpler to compute and to interpret.
 
 __Compared to
-[Diversity indexes](https://en.wikipedia.org/wiki/Diversity_index), _Ouroboros_
+[Diversity indexes](https://en.wikipedia.org/wiki/Diversity_index)__, _Ouroboros_
 returns percentage values instead of squared values (Gini-Simpson index) or
 logarithmic values (Shannon index). This choice makes the function easier to
 interpret since the scale is linear (especially for large lists). In addition,
