@@ -21,9 +21,9 @@ __Interpretation of Ouroboros Index__:
 
 __Examples__:
 
-Individuals are evenly distributed among groups: Index = 1, Indice =3
+Individuals are evenly distributed among groups: Index = 1, Indice = 3
 
-![Individuals are evenly distributed among groups: Index = 1, Indice =3](uniform.png)
+![Individuals are evenly distributed among groups: Index = 1, Indice = 3](uniform.png)
 
 Individuals are distributed in 1 group - Index = 0, Indice=1
 
