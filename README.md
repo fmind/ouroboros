@@ -8,23 +8,22 @@ _Ouroboros_ is a function which measures the uniformity of a list of frequencies
 
 __Input__:
 * an array of frequencies (counts or proportions values) 
-* a boolean which set the function to return the Indice
 
 __Output__:
 * Index: quantifies the uniformity of a list in an unitless scale (0 for min. uniformity, 1 for max. uniformity)
-* Indice: the minimal number of groups that includes at least 50\% of the individuals (between 0 and N/2)
+* Indice (option): the minimal number of groups that includes at least 50\% of the individuals (between 0 and N/2)
 
-__Interpretation of Ouroboros Index__:
-* Index -- twice the minimum percentage of values to include in order to reach 50% of individuals
-* Index / 2 -- the minimal proportion of groups which includes 50% of individuals
+__Interpretation__:
+* Index: twice the minimum percentage of values to include in order to reach 50% of individuals
+* Index/2: the minimal proportion of groups which includes 50% of individuals
 
-__Examples__:
+__Example__:
 
 Individuals are evenly distributed among groups: Index = 1, Indice =3
 
 ![Individuals are evenly distributed among groups: Index = 1, Indice =3](uniform.png)
 
-Individuals are distributed in 1 group - Index = 0, Indice=1
+Individuals are distributed in 1 group: Index = 0, Indice=1
 
 ![Individuals are distributed in 1 group - Index = 0, Indice=1](not-uniform.png)
 
@@ -36,7 +35,7 @@ __Pseudo-code (high-level)__:
 - sort the list of frequencies in descending order
 - accumulate values from the head until 50% individuals are included
 - smooth values depending on the final percentage of individuals accumulated
-- return the Index (Indice in option) of the list
+- return the Index (and optionally the Indice) of the list
 
 # Why is Ouroboros different ?
 
@@ -46,16 +45,14 @@ finds the minimal number of values to sum in order to reach 50% of the distribut
 
 __Compared to a
 [Pearson's chi-squared test](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test#Discrete_uniform_distribution)__,
-_Ouroboros_ is not a test-statistic. Thus, _Ouroboros_ is simpler to compute and to interpret.
+_Ouroboros_ is not a statistic test value. Thus, _Ouroboros_ is simpler to compute and to interpret.
 
 __Compared to
 [Diversity indexes](https://en.wikipedia.org/wiki/Diversity_index)__, _Ouroboros_
 returns percentage values instead of squared values (Gini-Simpson index) or
 logarithmic values (Shannon index). This choice makes the function easier to
-interpret since the scale is linear (especially for large lists). In addition,
+interpret since the scale is linear. In addition,
 _Ouroboros_ will always returns an index of 0 or 1 for the two most extremes cases.
-
-__Comparison between Ouroboros and Gini for small arrays__:
 
 ARRAY           | OURO | GINI
 ----------------|------|-----
