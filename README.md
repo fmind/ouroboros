@@ -22,11 +22,11 @@ __Example__:
 
 Individuals are evenly distributed among groups: Index = 1, Indice = 3
 
-![Individuals are evenly distributed among groups: Index = 1, Indice = 3](uniform.png)
+![Individuals are evenly distributed among groups: Index = 1, Indice = 3](example/uniform.png)
 
 Individuals are distributed in 1 group: Index = 0, Indice=1
 
-![Individuals are distributed in 1 group - Index = 0, Indice=1](not-uniform.png)
+![Individuals are distributed in 1 group - Index = 0, Indice=1](example/not-uniform.png)
 
 # How does Ouroboros work ?
 
