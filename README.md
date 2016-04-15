@@ -1,10 +1,11 @@
-<p align="center" style="width: 500px">
-  <img src="ouroboros.gif"/>
-</p>
 
 # What is Ouroboros ?
 
 _Ouroboros_ is a function which measures the uniformity of a list of frequencies, independently of the size of the list.
+
+<p align="center">
+  <img src="ouroboros.gif"/>
+</p>
 
 __Input__:
 * an array of frequencies (counts or proportions values) 
@@ -19,9 +20,9 @@ __Interpretation__:
 
 __Example__:
 
-Individuals are evenly distributed among groups: Index = 1, Indice =3
+Individuals are evenly distributed among groups: Index = 1, Indice = 3
 
-![Individuals are evenly distributed among groups: Index = 1, Indice =3](uniform.png)
+![Individuals are evenly distributed among groups: Index = 1, Indice = 3](uniform.png)
 
 Individuals are distributed in 1 group: Index = 0, Indice=1
 
