@@ -10,8 +10,10 @@ class OuroborosTests(unittest.TestCase):
 
     # array sums add to 100 for convenience and intuition
     cases = [
+        # n = 0
+        ([], 0, 0),
         # n = 1
-        ([100], 1, 1),
+        ([100], 0, 0),
         # n = 2
         ([100, 0], 0.0, 1),
         ([75, 25], 0.5, 1),

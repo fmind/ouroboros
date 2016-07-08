@@ -18,7 +18,7 @@ def ouroboros(array, with_indice=False):
     idc = 0
     
     if N <= 1:
-        return (1, 1) if with_indice else 1
+        return (0, 0) if with_indice else 0
     
     while acc < (S/2):
         acc += A.pop()

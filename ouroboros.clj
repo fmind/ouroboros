@@ -6,7 +6,7 @@
   [coll]
   (let [coll (sort #(compare %2 %1) coll)
         s (apply + coll), n (count coll)]
-    (if (= n 1) 1N
+    (if (<= n 1) 0N
         (loop [[v & rest-coll] coll, acc 0, i 0]
           (if (< acc (/ s 2))
             (recur rest-coll (+ acc v) (inc i))
@@ -20,10 +20,12 @@
               index))))))
 
 (deftest can-compute-ouroboros-index
+  (testing "n = 0"
+    (is (= (ouroboros []) 0/100)))
   (testing "n = 1"
-    (is (= (ouroboros [0]) 100/100))
-    (is (= (ouroboros [50]) 100/100))
-    (is (= (ouroboros [100]) 100/100)))
+    (is (= (ouroboros [0]) 0/100))
+    (is (= (ouroboros [50]) 0/100))
+    (is (= (ouroboros [100]) 0/100)))
   (testing "n = 2"
     (is (= (ouroboros [100, 0]) 0/100))
     (is (= (ouroboros [75, 25]) 50/100))
